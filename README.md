@@ -1,5 +1,8 @@
 # Lib For Go Standard Iterators
 
+[![Go](https://github.com/lezhnev74/iter_lib/actions/workflows/tests.yml/badge.svg)](https://github.com/lezhnev74/iter_lib/actions/workflows/tests.yml)
+
+
 Go's standard iterators `iter.Seq[v]` and `iter.Seq2[K,V]` have no function to combine
 them into more useful pipelines. This lib provides that.
 
