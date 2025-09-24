@@ -1,4 +1,4 @@
-# Lib For Standard Iterators
+# Lib For Go Standard Iterators
 
 Go's standard iterators `iter.Seq[v]` and `iter.Seq2[K,V]` have no function to combine
 them into more useful pipelines. This lib provides that.
@@ -22,7 +22,19 @@ them into more useful pipelines. This lib provides that.
 - `MergeOrdered` and `MergeOrdered2`: Merge two ordered sequences into a single sequence maintaining sort order, with
   `MergeOrdered2` handling key-value pairs 
 
+## Example
 
+```go
+// see pipeline_test.go
+s1 := slices.Values([]int{1, 2})
+s2 := slices.Values([]int{2, 3})
+
+merge := iter_lib.MergeOrdered(s1, s2, false)
+pipeline := iter_lib.Dedup(merge, func (i1, i2 int) bool { return i1 == i2 })
+
+result := slices.Collect(pipeline) // []int{1, 2, 3}
+
+```
 
 
  
