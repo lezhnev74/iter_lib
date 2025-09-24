@@ -1,0 +1,15 @@
+linters:
+  disable-all: true
+  enable:
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+    - unused
+    - goconst
+    - gofmt
+    - gocyclo
+    - misspell
+  # Enable only fast linters from enabled linters set (first run won't be fast)
+  fast: false
