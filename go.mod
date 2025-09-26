@@ -1,4 +1,4 @@
-module github.com/lezhnev74/iter
+module github.com/lezhnev74/iter_lib
 
 go 1.23
 
