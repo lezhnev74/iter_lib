@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	iter_lib "github.com/lezhnev74/iter"
+	"github.com/lezhnev74/iter_lib"
 )
 
 func TestMap(t *testing.T) {

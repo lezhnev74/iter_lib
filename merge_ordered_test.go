@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	iter2 "github.com/lezhnev74/iter"
+	"github.com/lezhnev74/iter_lib"
 )
 
 func TestMergeOrdered2(t *testing.T) {
@@ -80,7 +80,7 @@ func TestMergeOrdered2(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(
 			tt.name, func(t *testing.T) {
-				gotIt := iter2.MergeOrdered2(tt.args.s1, tt.args.s2, tt.args.desc)
+				gotIt := iter_lib.MergeOrdered2(tt.args.s1, tt.args.s2, tt.args.desc)
 				results := seq2ToKvs(gotIt)
 				require.Equal(
 					t, tt.want, results,
@@ -171,7 +171,7 @@ func TestMergeOrdered(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(
 			tt.name, func(t *testing.T) {
-				gotIt := iter2.MergeOrdered(tt.args.s1, tt.args.s2, tt.args.desc)
+				gotIt := iter_lib.MergeOrdered(tt.args.s1, tt.args.s2, tt.args.desc)
 				results := slices.Collect(gotIt)
 				require.Equal(
 					t, tt.want, results,
